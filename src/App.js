@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Layout from "./layout/index"
+import Home from "./pages/Home";
+import UmutHoca from "./pages/UmutHoca";
+import Axios from "./pages/Axios";
+import RenkSayfa from "./pages/RenkSayfa"
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  return <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Layout/>}>
+      <Route index element={<Home/>}/>
+      <Route path="hoca" element={<UmutHoca/>}/>
+      <Route path="axios" element={<Axios/>}/>
+      <Route path="renk" element={<RenkSayfa/>}/>
+    </Route>
+  </Routes>
+  </BrowserRouter>;
 }
 
 export default App;

@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.yonlendirmeButonu{
+  color: white;
+  text-decoration: none;
+}
+.yonlendirmeButonu:hover{
+  color: red;
+}
+.buton{
+  margin-left: 15px;
+}
+.light{
+  background-color: blue;
+}
+.dark{
+  background-color: red;
+}
